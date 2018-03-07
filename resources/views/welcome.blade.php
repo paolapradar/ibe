@@ -9,7 +9,9 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <link rel="stylesheet" href="{{ url('/css/app.css') }}" />
+        <link rel="stylesheet" href="{{ url('/css/style.css') }}" />
+        <script src="{{ url('/js/app.js') }}"></script>
         <!-- Styles -->
         <style>
             html, body {
@@ -88,8 +90,15 @@
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a data-toggle="modal" href="#" data-target="#modalDefault">Prueba Modal</a>
                 </div>
             </div>
+        </div>
+        <div class="content">
+          @section('modalcontent')
+              Prueba
+          @endsection
+          @include('layouts/modal', ['modaltitle' => 'Prueba'])
         </div>
     </body>
 </html>
