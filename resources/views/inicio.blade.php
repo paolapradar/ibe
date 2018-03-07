@@ -19,7 +19,7 @@
           <div class="carousel-caption d-none d-md-block text-right">
             <h1>IBE - Orientación educativa.</h1>
             <p>“Nunca consideres el estudio como una obligación, sino como una oportunidad para penetrar en el bello y maravilloso mundo del saber”.- Albert Einstein</p>
-            <p><a class="btn btn-lg btn-info" href="#" role="button">Ver vídeo</a></p>
+            <p><a class="btn btn-lg btn-info" data-toggle="modal" href="#" data-target="#modalDefault">Ver vídeo</a></p>
           </div>
         </div>
       </div>
@@ -54,4 +54,14 @@
     </a>
   </div>
   <!--FIN CARRUSEL -->
+  <div class="content">
+    @section('modalcontent')
+    <div class="modal-video">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/COwKCvDm73U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+    @endsection
+    @include('layouts/modal', ['modaltitle' => 'IBE'])
+  </div>
 @stop
